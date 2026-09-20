@@ -1,173 +1,236 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pink Purple - Premium Kurti Set</title>
+    <title>eBonaz | Premium Ethnic Wear</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { font-family: 'Hind Siliguri', sans-serif; background-color: #f3f4f6; }
-        .sticky-bottom { position: fixed; bottom: 0; width: 100%; max-width: 32rem; }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .brand-font { font-family: 'Playfair Display', serif; }
+        .primary-color { color: #5C4033; } 
+        .primary-bg { background-color: #5C4033; }
+        .primary-bg-hover:hover { background-color: #3e2b22; }
+        
+        /* Modal Styles */
+        .modal { display: none; }
+        .modal.active { display: flex; }
     </style>
 </head>
-<body class="max-w-lg mx-auto bg-white shadow-lg relative pb-20">
+<body class="bg-[#faf9f6] text-gray-800 relative">
 
-    <!-- Header / Product Image -->
-    <div class="relative">
-        <span class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">৩৫% ছাড়!</span>
-        <span class="absolute top-4 right-4 bg-teal-600 text-white px-4 py-1 font-bold text-lg rounded">৭৮০ ৳</span>
-        <!-- Product Image -->
-        <img src="pic-1.jpeg" alt="Kurti Set" class="w-full h-auto">
+    <!-- Topbar -->
+    <div class="primary-bg text-white text-sm py-2 px-4 flex justify-between items-center hidden md:flex">
+        <div><i class="fas fa-envelope mr-2"></i> ebonazbd@gmail.com</div>
+        <div><i class="fas fa-truck mr-2"></i> Fast Delivery inside Dhaka</div>
     </div>
 
-    <!-- Product Features -->
-    <div class="p-5 bg-gray-50 mt-2">
-        <h2 class="text-xl font-bold text-center mb-4 border-b pb-2">আমাদের পণ্যের বৈশিষ্ট্য</h2>
-        <ul class="space-y-3 text-gray-700 text-sm">
-            <li class="flex items-start"><span class="text-red-500 mr-2">✔</span> স্টাইল আর আরামের নিখুঁত সমন্বয় এই সুন্দর এমব্রয়ডারি করা পাজামা সেট।</li>
-            <li class="flex items-start"><span class="text-red-500 mr-2">✔</span> ফ্যাব্রিক: সুতি স্লাপ কটন কাপড় সফট ও আরামদায়ক</li>
-            <li class="flex items-start"><span class="text-red-500 mr-2">✔</span> সাইজ: 40 (L), 42 (XL), 44 (XXL)</li>
-            <li class="flex items-start"><span class="text-red-500 mr-2">✔</span> ভালো না লাগলে ডেলিভারি চার্জ দিয়ে রিটার্ন বা এক্সচেঞ্জ সুবিধা।</li>
-        </ul>
-    </div>
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-4xl brand-font primary-color tracking-wide flex items-center">
+                <span class="italic font-semibold">eBonaz</span>
+            </a>
 
-    <!-- Countdown Timer -->
-    <div class="p-5 text-center mt-2 border-t border-b border-red-200">
-        <h3 class="text-lg font-bold mb-3">অফারটি সীমিত সময়ের জন্য!</h3>
-        <div class="flex justify-center gap-4 text-white">
-            <div class="bg-red-500 p-3 rounded-lg min-w-[60px]"><span id="hours" class="text-xl font-bold">০৫</span><br><span class="text-xs">ঘণ্টা</span></div>
-            <div class="bg-red-500 p-3 rounded-lg min-w-[60px]"><span id="minutes" class="text-xl font-bold">৩০</span><br><span class="text-xs">মিনিট</span></div>
-            <div class="bg-red-500 p-3 rounded-lg min-w-[60px]"><span id="seconds" class="text-xl font-bold">০০</span><br><span class="text-xs">সেকেন্ড</span></div>
+            <!-- Search Bar -->
+            <div class="hidden md:flex flex-1 mx-8 relative">
+                <input type="text" placeholder="Search Kurtis, Palazzos, Ethnic wear..." class="w-full border border-gray-300 rounded-l-md px-4 py-2 focus:outline-none focus:border-[#5C4033]">
+                <button class="primary-bg primary-bg-hover text-white px-4 py-2 rounded-r-md transition">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <!-- WhatsApp Contact -->
+            <div class="flex items-center space-x-6 text-gray-600">
+                <a href="https://wa.me/8801781902575" target="_blank" class="flex items-center text-green-600 hover:text-green-700 transition font-medium">
+                    <i class="fab fa-whatsapp text-2xl mr-2"></i> 
+                    <span class="hidden md:inline">01781902575</span>
+                </a>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <!-- Order Form & Selection -->
-    <div class="p-5 mt-2">
-        <h2 class="text-xl font-bold text-center mb-5">অর্ডার ফর্ম</h2>
+    <!-- Hero Banner -->
+    <section class="relative bg-[#f4ece3] overflow-hidden">
+        <div class="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 z-10">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4 brand-font">
+                    Classic Soul, Modern Goal with <span class="primary-color italic">eBonaz</span>
+                </h1>
+                <p class="text-gray-700 mb-8 text-lg">
+                    Premium quality Kurtis, Palazzos, and Ethnic wear tailored for the modern woman. 
+                </p>
+                <a href="#products" class="primary-bg primary-bg-hover text-white text-lg font-semibold px-8 py-3 rounded shadow-lg transition inline-block">
+                    Shop Collection <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center relative">
+                <img src="images/pic-1.jpg" alt="Fashion Model" class="rounded-lg shadow-xl z-10 w-3/4 object-cover h-[500px]">
+                <div class="absolute bg-[#e6d5c3] rounded-full w-80 h-80 -z-0 top-10 right-10 opacity-60 blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section id="products" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-10 brand-font primary-color">Trending eBonaz Collections</h2>
         
-        <!-- Netlify Form Setup -->
-        <form name="order" method="POST" data-netlify="true" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             
-            <!-- Hidden inputs required for Total Price -->
-            <input type="hidden" name="Total_Price" id="hiddenTotalPrice" value="860 ৳">
-
-            <!-- Color Selection -->
-            <div class="mb-4">
-                <label class="block font-semibold mb-2">পছন্দের কালারটি সিলেক্ট করুন *</label>
-                <div class="space-y-2">
-                    <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-gray-50">
-                        <input type="radio" name="Color" value="মিষ্টি পিংক" class="w-5 h-5 text-teal-600 focus:ring-teal-500" required>
-                        <span class="ml-3 font-medium">মিষ্টি পিংক কালার - ৭৮০ ৳</span>
-                    </label>
-                    <label class="flex items-center p-3 border rounded cursor-pointer hover:bg-gray-50">
-                        <input type="radio" name="Color" value="ল্যাভেন্ডার" class="w-5 h-5 text-teal-600 focus:ring-teal-500">
-                        <span class="ml-3 font-medium">ল্যাভেন্ডার কালার - ৭৮০ ৳</span>
-                    </label>
+            <!-- Product 1 -->
+            <div class="bg-white border border-gray-100 shadow-sm overflow-hidden group">
+                <div class="relative overflow-hidden h-72">
+                    <img src="images/pic-2.jpg" alt="Palazzo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-4 border-t border-gray-100">
+                    <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider text-xs">Palazzos</p>
+                    <h3 class="font-semibold text-gray-800 mb-3 truncate">Maroon Printed Palazzo</h3>
+                    <div class="flex justify-between items-center border-t border-gray-100 pt-3">
+                        <span class="font-bold text-lg primary-color">৳ ১,২০০</span>
+                        <button onclick="openOrderModal('Maroon Printed Palazzo', '১,২০০')" class="primary-bg text-white px-3 py-1.5 rounded hover:bg-[#3e2b22] transition flex items-center text-sm font-medium">
+                            <i class="fas fa-shopping-bag mr-2"></i> Order Now
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Customer Details -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700">নাম *</label>
-                <input type="text" name="Customer_Name" placeholder="আপনার নাম লিখুন" class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500" required>
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700">ঠিকানা *</label>
-                <textarea name="Customer_Address" placeholder="আপনার সম্পূর্ণ ঠিকানা লিখুন" rows="2" class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500" required></textarea>
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700">ফোন নাম্বার *</label>
-                <input type="tel" name="Customer_Phone" placeholder="আপনার ফোন নাম্বার লিখুন" class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500" required>
-            </div>
-
-            <!-- Delivery Area -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">ডেলিভারি এরিয়া *</label>
-                <div class="space-y-2">
-                    <label class="flex items-center p-2 border rounded cursor-pointer">
-                        <input type="radio" name="Delivery_Area" value="ঢাকা সিটির ভিতরে (৮০ টাকা)" data-charge="80" onchange="updateTotal()" class="w-4 h-4 text-teal-600" checked>
-                        <span class="ml-2 text-sm">ঢাকা সিটির ভিতরে (৮০ টাকা)</span>
-                    </label>
-                    <label class="flex items-center p-2 border rounded cursor-pointer">
-                        <input type="radio" name="Delivery_Area" value="ঢাকা সাবসিটির ভিতরে (১২০ টাকা)" data-charge="120" onchange="updateTotal()" class="w-4 h-4 text-teal-600">
-                        <span class="ml-2 text-sm">ঢাকা সাবসিটির ভিতরে (১২০ টাকা)</span>
-                    </label>
-                    <label class="flex items-center p-2 border rounded cursor-pointer">
-                        <input type="radio" name="Delivery_Area" value="ঢাকা সিটির বাহিরে (১৫০ টাকা)" data-charge="150" onchange="updateTotal()" class="w-4 h-4 text-teal-600">
-                        <span class="ml-2 text-sm">ঢাকা সিটির বাহিরে (১৫০ টাকা)</span>
-                    </label>
+            <!-- Product 2 -->
+            <div class="bg-white border border-gray-100 shadow-sm overflow-hidden group">
+                <div class="relative overflow-hidden h-72">
+                    <img src="images/pic-3.jpg" alt="Palazzo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-4 border-t border-gray-100">
+                    <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider text-xs">Palazzos</p>
+                    <h3 class="font-semibold text-gray-800 mb-3 truncate">Beige Wide Leg Palazzo</h3>
+                    <div class="flex justify-between items-center border-t border-gray-100 pt-3">
+                        <span class="font-bold text-lg primary-color">৳ ৮৫০</span>
+                        <button onclick="openOrderModal('Beige Wide Leg Palazzo', '৮৫০')" class="primary-bg text-white px-3 py-1.5 rounded hover:bg-[#3e2b22] transition flex items-center text-sm font-medium">
+                            <i class="fas fa-shopping-bag mr-2"></i> Order Now
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Order Summary -->
-            <div class="bg-gray-100 p-4 rounded mt-4">
-                <h3 class="font-bold border-b pb-2 mb-2">অর্ডার সামারি</h3>
-                <div class="flex justify-between text-sm mb-1">
-                    <span>মোট মূল্য:</span>
-                    <span>৭৮০ ৳</span>
+            <!-- Product 3 -->
+            <div class="bg-white border border-gray-100 shadow-sm overflow-hidden group">
+                <div class="relative overflow-hidden h-72">
+                    <img src="images/pic-4.jpg" alt="Palazzo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                 </div>
-                <div class="flex justify-between text-sm mb-1">
-                    <span>ডেলিভারি চার্জ:</span>
-                    <span id="deliveryCharge">৮০ ৳</span>
-                </div>
-                <div class="flex justify-between font-bold text-lg mt-2 pt-2 border-t text-teal-700">
-                    <span>সর্বমোট:</span>
-                    <span id="totalPrice">৮৬০ ৳</span>
+                <div class="p-4 border-t border-gray-100">
+                    <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider text-xs">Palazzos</p>
+                    <h3 class="font-semibold text-gray-800 mb-3 truncate">Classic Brown Palazzo</h3>
+                    <div class="flex justify-between items-center border-t border-gray-100 pt-3">
+                        <span class="font-bold text-lg primary-color">৳ ১,৪০০</span>
+                        <button onclick="openOrderModal('Classic Brown Palazzo', '১,৪০০')" class="primary-bg text-white px-3 py-1.5 rounded hover:bg-[#3e2b22] transition flex items-center text-sm font-medium">
+                            <i class="fas fa-shopping-bag mr-2"></i> Order Now
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <button type="submit" class="w-full bg-teal-600 text-white font-bold py-3 rounded mt-4 hover:bg-teal-700 transition cursor-pointer">
-                অর্ডার কনফার্ম করুন
-            </button>
-        </form>
-    </div>
+            <!-- Product 4 -->
+            <div class="bg-white border border-gray-100 shadow-sm overflow-hidden group">
+                <div class="relative overflow-hidden h-72">
+                    <img src="images/pic-6.jpg" alt="Ethnic Wear" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-4 border-t border-gray-100">
+                    <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider text-xs">Ethnic Wear</p>
+                    <h3 class="font-semibold text-gray-800 mb-3 truncate">Golden Brown Party Wear</h3>
+                    <div class="flex justify-between items-center border-t border-gray-100 pt-3">
+                        <span class="font-bold text-lg primary-color">৳ ৩,৫০০</span>
+                        <button onclick="openOrderModal('Golden Brown Party Wear', '৩,৫০০')" class="primary-bg text-white px-3 py-1.5 rounded hover:bg-[#3e2b22] transition flex items-center text-sm font-medium">
+                            <i class="fas fa-shopping-bag mr-2"></i> Order Now
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Sticky Bottom Bar -->
-    <div class="sticky-bottom bg-white border-t flex justify-between items-center px-4 py-2 shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
-        <div class="flex flex-col">
-            <span class="font-bold">Pink Purple</span>
-            <span class="text-xs text-gray-500">Premium Fashion</span>
         </div>
-        <a href="https://wa.me/8801781902575" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-full font-bold flex items-center gap-2">
-            WhatsApp
-        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2c1e16] text-white pt-12 pb-8 mt-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <h3 class="text-3xl font-bold text-[#d4b595] mb-4 brand-font italic">eBonaz</h3>
+                <p class="text-gray-400 mb-4 text-sm leading-relaxed">Elevating women's fashion with premium quality apparel. Shop the best ethnic and western wear.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/ebonaz" target="_blank" class="w-10 h-10 rounded bg-[#402e24] flex items-center justify-center hover:bg-[#d4b595] hover:text-[#2c1e16] transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded bg-[#402e24] flex items-center justify-center hover:bg-[#d4b595] hover:text-[#2c1e16] transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 border-b border-[#402e24] pb-2 text-[#d4b595]">Contact Us</h4>
+                <ul class="space-y-3 text-gray-400 text-sm">
+                    <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-[#d4b595]"></i> Mirpur, Dhaka, Bangladesh</li>
+                    <li class="flex items-center"><i class="fas fa-envelope mr-3 text-[#d4b595]"></i> ebonazbd@gmail.com</li>
+                    <li class="flex items-center"><i class="fab fa-whatsapp mr-3 text-green-500 text-lg"></i> 01781902575</li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-[#402e24] text-center pt-8 text-gray-500 text-xs">
+            <p>&copy; 2026 eBonaz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Order Modal (Popup Form for Netlify) -->
+    <div id="orderModal" class="modal fixed inset-0 bg-black bg-opacity-60 z-50 items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md relative overflow-hidden">
+            <!-- Modal Header -->
+            <div class="bg-[#f4ece3] p-4 flex justify-between items-center border-b border-[#e6d5c3]">
+                <h3 class="font-bold text-xl primary-color brand-font">Place Your Order</h3>
+                <button onclick="closeOrderModal()" class="text-gray-500 hover:text-red-500 text-2xl leading-none">&times;</button>
+            </div>
+            
+            <!-- Netlify Form -->
+            <div class="p-6">
+                <!-- IMPORTANT: data-netlify="true" is required for Netlify to catch submissions -->
+                <form name="eBonaz Orders" method="POST" data-netlify="true" action="/thank-you.html">
+                    
+                    <!-- Product Info (Readonly) -->
+                    <div class="mb-4 bg-gray-50 p-3 rounded border border-gray-200">
+                        <label class="block text-xs text-gray-500 mb-1">Selected Product:</label>
+                        <input type="text" id="modalProductName" name="Product Name" class="w-full bg-transparent font-semibold text-[#5C4033] outline-none" readonly>
+                        <input type="text" id="modalProductPrice" name="Price" class="w-full bg-transparent text-sm text-gray-600 outline-none" readonly>
+                    </div>
+
+                    <!-- Customer Info -->
+                    <div class="mb-4">
+                        <label class="block text-sm text-gray-700 mb-1 font-medium">Your Name *</label>
+                        <input type="text" name="Customer Name" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-[#5C4033]" placeholder="e.g. Nusrat Jahan">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-sm text-gray-700 mb-1 font-medium">Phone Number *</label>
+                        <input type="tel" name="Phone Number" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-[#5C4033]" placeholder="01XXXXXXXXX">
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-sm text-gray-700 mb-1 font-medium">Delivery Address *</label>
+                        <textarea name="Address" required rows="2" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-[#5C4033]" placeholder="House, Road, Area (e.g. Mirpur-10)"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full primary-bg primary-bg-hover text-white font-bold py-3 rounded transition shadow-md">
+                        Confirm Order
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <!-- JavaScript for Interactivity -->
+    <!-- JavaScript for Modal -->
     <script>
-        // Update Price Calculation
-        const productPrice = 780;
-        function updateTotal() {
-            const deliveryOptions = document.getElementsByName('Delivery_Area');
-            let deliveryCharge = 80;
-            
-            for (let option of deliveryOptions) {
-                if (option.checked) {
-                    deliveryCharge = parseInt(option.getAttribute('data-charge'));
-                    break;
-                }
-            }
-            
-            document.getElementById('deliveryCharge').innerText = deliveryCharge + ' ৳';
-            let total = productPrice + deliveryCharge;
-            document.getElementById('totalPrice').innerText = total + ' ৳';
-            
-            // Update hidden input for Netlify Form submission
-            document.getElementById('hiddenTotalPrice').value = total + ' ৳';
+        function openOrderModal(productName, price) {
+            document.getElementById('modalProductName').value = productName;
+            document.getElementById('modalProductPrice').value = 'Price: ৳ ' + price;
+            document.getElementById('orderModal').classList.add('active');
         }
 
-        // Simple Countdown Timer 
-        let time = 5 * 3600 + 30 * 60; 
-        setInterval(() => {
-            let h = Math.floor(time / 3600);
-            let m = Math.floor((time % 3600) / 60);
-            let s = time % 60;
-            document.getElementById('hours').innerText = h.toString().padStart(2, '0');
-            document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
-            document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
-            if(time > 0) time--;
-        }, 1000);
+        function closeOrderModal() {
+            document.getElementById('orderModal').classList.remove('active');
+        }
     </script>
 </body>
 </html>
